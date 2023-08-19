@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrangea Wordcounter</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100vh;
+        }
+
+        body>div {
+            margin: 0 16px 50px;
+
+            max-width: 648px;
+        }
+
+        h1 {
+            font-family: "Plain Black";
+            margin-bottom: 50px;
+        }
+
+        textarea {
+            resize: none;
+
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+
+            border: 2px solid;
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 150%;
+            padding: 6px 12px;
+
+            box-sizing: border-box;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: large;
+
+            line-height: 150%;
+            text-align: justify;
+        }
+
+        @font-face {
+            font-family: "Plain Black";
+            src: url("./Plain_Black.ttf");
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Hydrangea Wordcounter</h1>
+        <textarea id="inputText" placeholder="Input your passages here."></textarea>
+        <p><b>Word number: <span id="wordCount">0</span></b></p>
+        <br>
+        <p>A word counter is a simple tool that counts the number of words in a given text. It's useful for tasks like staying within word limits for essays, meeting character requirements on social media, or tracking language learning progress. It helps writers, students, and content creators manage their text length effectively.</p>
+    </div>
+
+    <script>
+        const inputText = document.getElementById('inputText');
+        const wordCount = document.getElementById('wordCount');
+
+        inputText.addEventListener('input', updateWordCount);
+
+        function updateWordCount() {
+            const text = inputText.value;
+            const words = text.trim().split(/\s+/).filter(word => word !== '');
+            wordCount.textContent = words.length;
+        }
+    </script>
+</body>
+
+</html>
