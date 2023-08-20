@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydrangea Wordcounter</title>
     <style>
+        * {
+            color: rgb(46, 92, 62);
+        }
+
         body {
+
+            background-image: url("./42285A53-BA62-4677-B143-87E7BF18ABB4_1_201_a.jpeg");
+            background-size: contain;
+
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -33,25 +41,40 @@
             resize: none;
 
             width: 100%;
-            height: 200px;
+            height: 100px;
             margin-bottom: 20px;
 
-            border: 2px solid;
+            border: none;
+
             font-size: large;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: 150%;
-            padding: 6px 12px;
 
             box-sizing: border-box;
+            background: none;
+        }
+
+        textarea::placeholder {
+            font-family: "Pecita";
+            font-style: italic;
+            color: rgb(46, 92, 62);
         }
 
         textarea:focus {
             outline: none;
         }
 
+        textarea::-webkit-scrollbar {
+            width: 0;
+        }
+
         p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: "Pecita";
             font-size: large;
+            font-style: italic;
+
+            text-decoration: underline;
+            text-decoration-color: rgba(46, 92, 62,0.3);
 
             line-height: 150%;
             text-align: justify;
@@ -60,6 +83,11 @@
         @font-face {
             font-family: "Plain Black";
             src: url("./Plain_Black.ttf");
+        }
+
+        @font-face {
+            font-family: "Pecita";
+            src: url("./Pecita.otf");
         }
     </style>
     
@@ -72,6 +100,7 @@
         <p><b>Word number: <span id="wordCount">0</span></b></p>
         <br>
         <p>A word counter is a simple tool that counts the number of words in a given text. It's useful for tasks like staying within word limits for essays, meeting character requirements on social media, or tracking language learning progress. It helps writers, students, and content creators manage their text length effectively.</p>
+        <p style="text-align: right;">- Acan</p>
     </div>
 
     <script>
