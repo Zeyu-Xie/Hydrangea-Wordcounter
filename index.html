@@ -5,14 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydrangea Wordcounter</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/favicon.ico">
+    <link rel="stylesheet" href="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/index.css">
 
 <body>
+
+    <header>
+        <h1 style="display: none;">Hydrangea Wordcounter</h1>
+        <nav>
+            <a href="#">Hydrangea Wordcounter</a>
+        </nav>
+    </header>
+
     <div>
-        <h1>Hydrangea Wordcounter</h1>
-        <textarea id="inputText" placeholder="Input your passages here." style="resize: none;"></textarea>
+        <h2>Text Area</h2>
+        <textarea id="inputText" placeholder="Input your words here."
+            style="width: 100%; min-height: 24vh; padding: 0.6rem 1rem;"></textarea>
+        <h2>Statistical Result</h2>
         <p>Word number: <span id="wordCount">0</span></p>
     </div>
+    <footer>
+        <p>
+            ©️ <time class="current_year">2024</time> <a href="https://zeyu-xie.github.io" class="author">Acan Xie</a>.
+            All rights reserved.
+        </p>
+        <nav>
+            <a href="mailto:xie.zeyu20@gmail.com">Email</a> |
+            <a href="https://github.com/zeyu-xie">GitHub</a>
+        </nav>
+    </footer>
 
     <script>
         const inputText = document.getElementById('inputText');
@@ -25,6 +46,8 @@
             const words = text.trim().split(/\s+/).filter(word => word !== '');
             wordCount.textContent = words.length;
         }
+    </script>
+    <script src="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/index.js">
     </script>
 
     <!-- Google tag (gtag.js) -->
