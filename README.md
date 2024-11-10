@@ -1,3 +1,3 @@
 # Hydrangea-Wordcounter
 
-English Words Counter.
+A website for counting English words.
